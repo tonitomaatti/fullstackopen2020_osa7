@@ -2,7 +2,7 @@ module.exports = {
   "env": {
       "browser": true,
       "es6": true,
-      "jest/globals": true,
+      "jest/globals": true ,
       "cypress/globals": true
   },
   "extends": [ 
@@ -46,10 +46,5 @@ module.exports = {
       ],
       "no-console": 0,
       "react/prop-types": 0
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
   }
 }
