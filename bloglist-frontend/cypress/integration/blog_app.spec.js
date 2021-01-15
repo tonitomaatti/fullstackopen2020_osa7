@@ -1,6 +1,7 @@
 describe('Blog app', function() {
   beforeEach(function() {
     cy.request('POST', 'http://localhost:3001/api/testing/reset')
+    cy.createUser({ name: 'root', username: 'root', password: 'root' })
     cy.createUser({ name: 'Cypress Tester', username: 'c_tester', password: 'secretPassword' })
     cy.visit('http://localhost:3000')
   })
