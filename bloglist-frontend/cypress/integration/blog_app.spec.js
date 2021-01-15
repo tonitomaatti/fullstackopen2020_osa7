@@ -136,7 +136,7 @@ describe('Blog app', function() {
           .should('not.be.visible')
       })
 
-      it.only('blogs are ordered by likes descending', function () {
+      it('blogs are ordered by likes descending', function () {
         cy.get('.toggle-view-button').each($btn => {
           cy.wrap($btn).click()
         })

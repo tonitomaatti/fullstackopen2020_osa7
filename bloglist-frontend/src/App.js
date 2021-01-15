@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Blog from './components/Blog'
 import BlogForm from './components/BlogForm'
 import Togglable from './components/Togglable'
+import Notification from './components/Notification'
 import blogService from './services/blogs'
 import loginService from './services/login'
 
@@ -156,33 +157,6 @@ const App = () => {
       sortAndSetBlogs( blogs )
     )
   }, [])
-
-  const Notification = ({ message }) => {
-    if (message === null) {
-      return null
-    }
-
-    const notificationStyle = {
-      background: 'lightgrey',
-      fontSize: '20px',
-      borderStyle: 'solid',
-      borderRadius: '5px',
-      padding: '10px',
-      marginBottom: '10px'
-    }
-
-    if (message.type === 'success') {
-      notificationStyle.color = 'green'
-    } else if (message.type === 'error') {
-      notificationStyle.color = 'red'
-    }
-
-    return (
-      <div id="notification" style={notificationStyle}>
-        {message.content}
-      </div>
-    )
-  }
 
   if (user === null) {
     return (
